@@ -56,7 +56,7 @@ def enviar_archivo_via_socket(archivo_a_enviar, direccion_ip_destino, puerto_des
         with open(archivo_a_enviar, 'rb') as file:
             contenido = file.read()
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as conexion:
-            print("\033[93m" + f"[*] Conectando a {direccion_ip_destino} en el puerto {puerto_destino}" + "\033[0m")  # Mensaje en naranja
+            print("\033[93m" + f"[*] Conectando a {direccion_ip_destino}:{puerto_destino}" + "\033[0m")  # Mensaje en naranja
             conexion.connect((direccion_ip_destino,puerto_destino))
             conexion.sendall(contenido)
             os.remove("output.txt")
