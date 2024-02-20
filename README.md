@@ -3,6 +3,7 @@
 ## Requirements Installation
 
 <h4>If you do not have the requirements installed, do the following:</h4>
+
 ```py
 pip install -r requirements.txt
 ```
